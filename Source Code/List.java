@@ -1,16 +1,17 @@
 /*
- * Name:		Katarina Capalbo n01399315
+ * Name:		Katarina Capalbo 
+ * Student ID:		n01399315
  * Date:		5/28/2019
- * Assignment:	Project 1 COP3530
+ * Assignment:		Project 1 COP3530, Data Structures
  * 
- * Description: Originally an arraylist class that supports
- * 				the mp3 GUI, being changed to a linked list for
- * 				the project
+ * Description: Originally an arraylist class that supports the mp3 GUI, now has been modified
+ *  		to a linked list for this project
  */
 
+// start class List
 public class List {
 
-	// variable declarations 
+    // variable declarations 
     private ListNode head = new ListNode(); // head of the list
     private ListNode tail= new ListNode(); // tail of the list
     private ListNode current= new ListNode(); // used to traverse list
@@ -20,7 +21,7 @@ public class List {
     // constructor
     public List() {}
     
-    // add a new node to the end of the Linked List
+    // insertItem() adds a new node to the end of the Linked List
     public  void insertItem(String name)
     {
     	// create new node
@@ -40,9 +41,9 @@ public class List {
     	
     	tail = newNode;
     	listSize++;
-    }
+    } // end insertItem(String name)
     
-    // add a new node at a specified position of the Linked List
+    // insertItem() adds a new node at a specified position of the Linked List
     public  void insertItem(String name, int pos)
     {
     	// create new node
@@ -70,15 +71,15 @@ public class List {
     	}	
 
 		listSize++;
-    }
+    } // end insertItem(String name, int pos)
    
-    // return the size of the LinkedList
+    // size() returns the size of the LinkedList
     public int size()
     {
     	return listSize;
-    }
+    } // end size()
 
-    // remove a node based on the name of the string it holds
+    // removeItem() removes a node based on the name of the string it holds
     public boolean removeItem(String aname)
     {
     	boolean foundNameFlag = false;
@@ -112,9 +113,9 @@ public class List {
     	listSize--;
     	
     	return foundNameFlag;
-    }
+    } // end removeItem(String aname)
 
-    // remove a node based on its position in the linked list
+    // removeItem() removes a node based on its position in the linked list
     public void removeItem(int position)
     {
     	current = head;
@@ -139,9 +140,9 @@ public class List {
     		prevNode.next = current.next; // remove node from position
     		listSize--;
     	}
-    }
+    } // end removeItem(int pos)
 
-    // return true if the linked list contains the string
+    // contains() returns true if the linked list contains the string
     public boolean contains(String name) 
     {
     	current = head;
@@ -155,17 +156,17 @@ public class List {
     	}
     	
     	return false;
-    }
+    }// end contains()
 
-    // remove all of the elements from the linked list
+    // clear() removes all of the elements from the linked list
     public void clear()
     {    	
     	head = null;
     	tail = null;
     	listSize = 0;
-    }
+    }// end clear
     
-    // return the element at the specified position in the list.
+    // get() return the element at the specified position in the list.
     public String get(int index)
     {
     	current = head;
@@ -176,9 +177,9 @@ public class List {
     	}
     	
     	return current.songName;
-    }
+    }// end get(int index)
 
-    // Override the toStringmethodto printout the names of all the songs in the list
+    // toString() Override the toStringmethodto printout the names of all the songs in the list
     public String toString()
     {
     	current = head;
@@ -190,7 +191,7 @@ public class List {
     	}
 
     	return temp;
-    }
+    }// end toString()
     
     /*
      * Return a String that starts with < html > ends with < /html >
@@ -208,8 +209,8 @@ public class List {
     	}
     	temp = temp+"</html>";
     	return temp;
-    }
-}
+    }// end toHTMLString()
+}// end class List
 
 // A class to create nodes for the List class
 class ListNode {
@@ -221,13 +222,13 @@ class ListNode {
 	public ListNode()
 	{
 		this.songName = "";
-	}
+	}// end constructor ListNode()
 	
 	// constructor with 1 parameter, set the name of the song file
 	public ListNode(String name)
 	{
 		this.songName = name;
-	}
+	}// end constructor ListNode(String name)
 	
 	/*  constructor with 2 parameters, name of the song and
 	 *  the next node in the list
@@ -236,5 +237,5 @@ class ListNode {
 	{
 		this.songName = name;
 		this.next = nxt;
-	}
-}
+	}// end constructor ListNode(String name, ListNode nxt)
+}// end class ListNode
