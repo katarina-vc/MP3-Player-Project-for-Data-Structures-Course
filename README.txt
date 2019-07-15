@@ -15,7 +15,7 @@ The MP3 source code can be found in MP3.java and the Linked List source code can
 
 
 ***** BEFORE COMPILING ******************************************************
-I am using the Eclipse 2018 IDE for this project if you are following step by step and word for word.
+I am using the Eclipse 2019 IDE for this project if you are following step by step and word for word.
 
 Before compiling: 
 You must extract the "Project 1 Input Files" and place them in your project folder in your IDE before continuing. 
